@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aadhya Srivastava | Data Scientist &amp; Analyst</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#060e20",
+                        "inverse-on-surface": "#283044",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#002e6a",
+                        "on-error": "#690005",
+                        "on-surface": "#dae2fd",
+                        "primary": "#d0bcff",
+                        "outline": "#958ea0",
+                        "surface-bright": "#31394d",
+                        "surface": "#0b1326",
+                        "on-background": "#dae2fd",
+                        "primary-container": "#a078ff",
+                        "on-primary": "#3c0091",
+                        "primary-fixed": "#e9ddff",
+                        "on-tertiary": "#003731",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#00302a",
+                        "surface-container": "#171f33",
+                        "secondary-container": "#0566d9",
+                        "inverse-surface": "#dae2fd",
+                        "secondary": "#adc6ff",
+                        "inverse-primary": "#6d3bd7",
+                        "on-primary-fixed": "#23005c",
+                        "surface-dim": "#0b1326",
+                        "on-primary-fixed-variant": "#5516be",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "surface-variant": "#2d3449",
+                        "surface-tint": "#d0bcff",
+                        "secondary-fixed": "#d8e2ff",
+                        "tertiary-fixed-dim": "#3cddc7",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-surface-variant": "#cbc3d7",
+                        "surface-container-high": "#222a3d",
+                        "surface-container-highest": "#2d3449",
+                        "tertiary": "#3cddc7",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-tertiary-fixed": "#00201c",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary-fixed-variant": "#005047",
+                        "tertiary-fixed": "#62fae3",
+                        "background": "#0b1326",
+                        "tertiary-container": "#00a392",
+                        "on-primary-container": "#340080",
+                        "outline-variant": "#494454",
+                        "on-secondary-fixed": "#001a42",
+                        "on-secondary-container": "#e6ecff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "xl": "40px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "base": "4px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(149, 142, 160, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border-color: rgba(208, 188, 255, 0.4);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #d0bcff 0%, #3cddc7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .primary-gradient-bg {
+            background: linear-gradient(135deg, #a078ff 0%, #0566d9 100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/50 backdrop-blur-xl border-b border-white/5">
+<div class="flex justify-between items-center px-gutter py-sm max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-background">Aadhya.DS</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">Experience</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+<button class="bg-primary text-on-primary px-gutter py-xs rounded-full font-label-md text-label-md hover:scale-105 active:scale-95 transition-transform">
+                Resume
+            </button>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 overflow-hidden">
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-gutter max-w-container-max mx-auto">
+<div class="relative mb-lg">
+<div class="absolute -inset-4 primary-gradient-bg opacity-30 blur-2xl rounded-full"></div>
+<img alt="Aadhya Srivastava" class="relative w-48 h-48 rounded-full object-cover border-4 border-surface-container-highest shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL195IQHgFvWl-5KMa1itvEw7WvvCTYvR5ID4tsuHTU9hSax9vl4g9BggIcU_zlQ8V3b_Cws1UXG4KGkUO0ioaXRtpigm4Ym4SYhlnTPE4WNje5nD9kp_dHT_eSQRXlij92x-9ViMn3qqYH34xBVUyHjqfeAcOKWzDwTDHdT5qp2vjpTc_iceAkKhRrKLJamI4iUHlrnSZaNApP61rCpZK9I4Gv3oKvrVknTSkAHZDuNITFswuPi3DD4dPoRpYI5e3OJ-CgqtD9zQ"/>
+</div>
+<h1 class="font-display-lg text-display-lg mb-xs md:text-[64px] text-on-background">Hi, I'm <span class="gradient-text">Aadhya Srivastava</span></h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant mb-lg h-8 typing-cursor" id="typing-text"></p>
+<div class="flex gap-md">
+<a class="primary-gradient-bg text-white px-lg py-sm rounded-full font-label-md text-label-md hover:translate-y-[-2px] transition-transform shadow-lg" href="#projects">View Projects</a>
+<a class="border border-outline text-on-surface px-lg py-sm rounded-full font-label-md text-label-md hover:bg-white/5 transition-colors" href="#contact">Contact Me</a>
+</div>
+</section>
+<!-- About Me -->
+<section class="py-xl px-gutter reveal" id="about">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-lg items-center">
+<div class="glass-card p-lg rounded-xl">
+<h2 class="font-headline-lg text-headline-lg mb-md text-on-background">Technical Foundation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-md">
+                    As a Data Analyst and Science Enthusiast, I specialize in transforming raw data into actionable narratives. My approach combines mathematical rigor with creative visualization to uncover trends that drive strategic decision-making.
+                </p>
+<div class="flex flex-wrap gap-sm">
+<span class="px-md py-xs bg-primary/10 text-primary border border-primary/20 rounded-full font-label-md text-label-md">SQL Mastery</span>
+<span class="px-md py-xs bg-primary/10 text-primary border border-primary/20 rounded-full font-label-md text-label-md">Pythonic Analysis</span>
+<span class="px-md py-xs bg-primary/10 text-primary border border-primary/20 rounded-full font-label-md text-label-md">Predictive Modeling</span>
+</div>
+</div>
+<div class="relative h-64 md:h-full">
+<div class="absolute inset-0 primary-gradient-bg opacity-20 rounded-3xl rotate-3"></div>
+<div class="absolute inset-0 bg-surface-container/40 backdrop-blur-sm border border-white/10 rounded-3xl -rotate-3 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-[64px] text-primary">analytics</span>
+<p class="font-headline-md text-headline-md mt-sm text-on-background">Data Driven</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-xl bg-surface-container-low px-gutter" id="skills">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-lg reveal">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Technical Arsenal</h2>
+<p class="text-on-surface-variant">The tools I use to solve complex data challenges.</p>
+</div>
+<div class="grid md:grid-cols-4 gap-md">
+<!-- Programming -->
+<div class="glass-card p-md rounded-xl text-center reveal" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">terminal</span>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant mb-base">Programming</h3>
+<div class="flex flex-wrap justify-center gap-xs">
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">PYTHON</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">SQL</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">R</span>
+</div>
+</div>
+<!-- Visualization -->
+<div class="glass-card p-md rounded-xl text-center reveal" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">bar_chart</span>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant mb-base">Visualization</h3>
+<div class="flex flex-wrap justify-center gap-xs">
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">POWER BI</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">TABLEAU</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">SEABORN</span>
+</div>
+</div>
+<!-- Libraries -->
+<div class="glass-card p-md rounded-xl text-center reveal" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">library_books</span>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant mb-base">Libraries</h3>
+<div class="flex flex-wrap justify-center gap-xs">
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">PANDAS</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">NUMPY</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">SCIKIT-LEARN</span>
+</div>
+</div>
+<!-- Databases -->
+<div class="glass-card p-md rounded-xl text-center reveal" style="transition-delay: 400ms;">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">database</span>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant mb-base">Databases</h3>
+<div class="flex flex-wrap justify-center gap-xs">
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">MYSQL</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">MONGODB</span>
+<span class="bg-surface-container-highest/50 px-base py-1 rounded-full text-[10px] font-bold text-on-surface">POSTGRESQL</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="py-xl px-gutter" id="projects">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-lg reveal">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background">Selected Projects</h2>
+<p class="text-on-surface-variant">Real-world applications of data science methodologies.</p>
+</div>
+<a class="hidden md:flex items-center text-primary font-label-md gap-xs" href="#">
+                    View All GitHub <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+<div class="grid md:grid-cols-2 gap-lg">
+<!-- Project 1 -->
+<div class="glass-card rounded-xl overflow-hidden reveal group shadow-primary/10 hover:shadow-primary/30 transition-all duration-500">
+<div class="relative overflow-hidden aspect-video">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBztVVRbbP0NOTBeWux3q79wG-RNyIlN2ClRYWF4q9vGSfvTlpRn852-sjHJUvXTiO4w9pimBjmy-IZ2jlDJev0XNawikoS9SELz5xaJnd4-VPUvHIEgJ7IcqOilXvwG3Y28VHtD3xxbfDQwWVZZ4Qv2GdP3cyqtfH5ZIUbIG3sU0ub9sAfbXwhYkzbt4YUAXqHQ9g3BpEKhiGPpxJ-voLHZzTTtKs8NNmvV4YNLP5b1qUL-U5ixicq_ycxn3JrnzOdfc5D0TUgAE')"></div>
+<div class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-md backdrop-blur-sm">
+<button class="bg-on-background text-background px-md py-xs rounded-full font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">visibility</span> Demo
+                            </button>
+<button class="bg-primary text-on-primary px-md py-xs rounded-full font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">code</span> Code
+                            </button>
+</div>
+</div>
+<div class="p-md">
+<div class="flex gap-xs mb-sm">
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">POWER BI</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">SQL</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs text-on-background">Sales Performance Dashboard</h3>
+<p class="text-on-surface-variant text-sm">End-to-end analytics dashboard tracking global sales trends and profit margins across multiple regions.</p>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="glass-card rounded-xl overflow-hidden reveal group shadow-primary/10 hover:shadow-primary/30 transition-all duration-500" style="transition-delay: 200ms;">
+<div class="relative overflow-hidden aspect-video">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0I5ykACSjAKs3g0Gm8g4VNN-lnXc65g76xwQL_ZFCbrHkrsmOEe4kd-1y-dxQiKwYypaD0Vn5PWeKPeYBVALFgMRC4YfPXdlWWwvTShvxXQZKTkHpIPRfzRFNJY9SklxwdRvWVQJQMT7Zk53DOodY4svh1CrIXdd5HzI24ZtaJ0yGmc-ZrdHOhj-BV_wmlKdgkkOpGxi51hZzIKd3OML5jiY0uNjnQsDQ1l4B_PTUXIHChbE1ZjT8LbVsYbZ6ZbHLmCRy8tQDKdQ')"></div>
+<div class="absolute inset-0 bg-background/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-md backdrop-blur-sm">
+<button class="bg-on-background text-background px-md py-xs rounded-full font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">visibility</span> Demo
+                            </button>
+<button class="bg-primary text-on-primary px-md py-xs rounded-full font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-sm">code</span> Code
+                            </button>
+</div>
+</div>
+<div class="p-md">
+<div class="flex gap-xs mb-sm">
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">PYTHON</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">ML</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs text-on-background">Customer Churn Prediction</h3>
+<p class="text-on-surface-variant text-sm">Predictive model achieving 92% accuracy in identifying at-risk customers using random forest algorithms.</p>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="glass-card rounded-xl overflow-hidden reveal group shadow-primary/10 hover:shadow-primary/30 transition-all duration-500">
+<div class="relative overflow-hidden aspect-video">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0J50a9AS536hfFdPRQVkRY4DuzflSTaL7fDlaE2LxVYWE1F20jqX6GCk_E3vMdiQRjU43g1Mtegp38W5SdvX5cgwbFgd-fCZHswDDNLJ8HVhyx55P9fgfAiC0rI__rG1V49j7an6uOl0y5fT8kul0VdhnY4CRxInm9sI3pe0Sto3d6iOoZBic3H9t8y--UxvvSKiM35S-DXdIXwDA9G8q-4YgHnsqieln74J5fwIPChmJwlky_q_0KjygOJQSsUPFqB-BA4PPuhc')"></div>
+</div>
+<div class="p-md">
+<div class="flex gap-xs mb-sm">
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">PANDAS</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">MATPLOTLIB</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs text-on-background">COVID-19 Analysis</h3>
+<p class="text-on-surface-variant text-sm">Comprehensive study of infection rates and recovery patterns across different demographics using Python.</p>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="glass-card rounded-xl overflow-hidden reveal group shadow-primary/10 hover:shadow-primary/30 transition-all duration-500" style="transition-delay: 200ms;">
+<div class="relative overflow-hidden aspect-video">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAyA3aC0T9pNmMORQ-Dj7Bw3Lw7OaGE4Hkr0wIZeP2Fn7B4vzl5vuNlEU1Mf_ktP1wFIYyPqApAjieqrtxBOQPovmeNOE6--JceR0UV7v2c1UwtP9tkdd90VnQ-dP7GiFBFZsvKeyr-4tCJg6utkp9-qZRDzu7aXmJsLXx88JLZa0eVrwgxmukNLB3W-IIbWrQLZQqrKB8TcbpaNyXcjKK3eEPDkYgXXR72zMVCm2QatgB_5WjCXGKnZkEkWg1kyisGHZF0KCHgfAY')"></div>
+</div>
+<div class="p-md">
+<div class="flex gap-xs mb-sm">
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">EXCEL</span>
+<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary/20 text-primary">TABLEAU</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-xs text-on-background">HR Analytics Dashboard</h3>
+<p class="text-on-surface-variant text-sm">Visualizing employee retention, performance reviews, and department-wise distribution for organizational growth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience & Education -->
+<section class="py-xl bg-surface-container px-gutter">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-xl">
+<!-- Experience -->
+<div class="reveal">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-on-background">Experience</h2>
+<div class="relative border-l-2 border-primary/30 ml-4 space-y-lg">
+<div class="relative pl-lg">
+<div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-background"></div>
+<h4 class="font-label-md text-label-md text-primary">2023 - PRESENT</h4>
+<h3 class="font-headline-md text-headline-md text-on-background">Data Analyst Intern</h3>
+<p class="text-on-surface-variant">Strategic Analytics Firm • Remote</p>
+<p class="mt-base text-sm text-on-surface-variant/80">Developed automated reporting workflows using SQL and Python, reducing manual effort by 40%.</p>
+</div>
+<div class="relative pl-lg">
+<div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary/40 border-4 border-background"></div>
+<h4 class="font-label-md text-label-md text-on-surface-variant">2022 - 2023</h4>
+<h3 class="font-headline-md text-headline-md text-on-background">Freelance Data Consultant</h3>
+<p class="text-on-surface-variant">Self-Employed</p>
+<p class="mt-base text-sm text-on-surface-variant/80">Provided visualization solutions for small business owners using Power BI and Google Sheets.</p>
+</div>
+</div>
+</div>
+<!-- Education -->
+<div class="reveal" style="transition-delay: 200ms;">
+<h2 class="font-headline-lg text-headline-lg mb-lg text-on-background">Academic Path</h2>
+<div class="space-y-md">
+<div class="glass-card p-md rounded-xl">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background">Bachelor of Computer Application</h3>
+<p class="text-on-surface-variant">Computer Science Engineering</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-md rounded-xl">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">workspace_premium</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background">Google Data Analytics</h3>
+<p class="text-on-surface-variant">Professional Certification</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl px-gutter reveal" id="contact">
+<div class="max-w-container-max mx-auto glass-card rounded-2xl p-lg md:p-xl">
+<div class="grid md:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-md text-on-background">Let's Build Something Insightful</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                        I'm always open to discussing new data projects, technical challenges, or collaborations.
+                    </p>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-md text-xs text-on-surface-variant uppercase">Email Me</p>
+<p class="font-headline-md text-headline-md text-on-background">aadhya.ds@example.com</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-xs text-on-surface-variant uppercase">Based In</p>
+<p class="font-headline-md text-headline-md text-on-background">Pune, India</p>
+</div>
+</div>
+</div>
+</div>
+<form class="space-y-md">
+<div>
+<label class="font-label-md text-label-md block mb-xs text-on-surface">Full Name</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all rounded-lg p-sm text-on-surface placeholder:text-outline" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-xs text-on-surface">Email Address</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all rounded-lg p-sm text-on-surface placeholder:text-outline" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-xs text-on-surface">Your Message</label>
+<textarea class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-all rounded-lg p-sm text-on-surface placeholder:text-outline" placeholder="Describe your project..." rows="4"></textarea>
+</div>
+<button class="w-full primary-gradient-bg text-white py-md rounded-xl font-headline-md shadow-lg hover:shadow-primary/20 transition-all" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low py-lg px-gutter border-t border-white/5">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div>
+<h3 class="font-headline-md text-headline-md font-bold mb-xs text-on-background">Aadhya Srivastava</h3>
+<p class="text-on-surface-variant font-label-md text-label-md">© 2026 Aadhya Srivastava. Built with Precision.</p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Kaggle</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md" href="#">Email</a>
+</div>
+</div>
+</footer>
+<!-- Scroll to Top -->
+<button class="fixed bottom-lg right-lg w-12 h-12 primary-gradient-bg text-white rounded-full shadow-xl opacity-0 translate-y-10 transition-all duration-300 flex items-center justify-center z-40" id="scrollTop">
+<span class="material-symbols-outlined">expand_less</span>
+</button>
+<script>
+    // Typing Animation
+    const textElement = document.getElementById('typing-text');
+    const phrases = ["Data Analyst", "Science Enthusiast", "ML Developer", "Insight Hunter"];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentPhrase = phrases[phraseIndex];
+        if (isDeleting) {
+            textElement.innerText = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            textElement.innerText = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let typingSpeed = 150;
+        if (isDeleting) typingSpeed /= 2;
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            typingSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typingSpeed = 500;
+        }
+
+        setTimeout(type, typingSpeed);
+    }
+
+    // Scroll Reveal
+    function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const elementTop = el.getBoundingClientRect().top;
+            const elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                el.classList.add("active");
+            }
+        });
+    }
+
+    // Scroll Top Button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        reveal();
+        if (window.scrollY > 300) {
+            scrollBtn.classList.remove('opacity-0', 'translate-y-10');
+        } else {
+            scrollBtn.classList.add('opacity-0', 'translate-y-10');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+        type();
+        reveal();
+    });
+</script>
+</body></html>
